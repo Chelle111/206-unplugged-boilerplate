@@ -99,7 +99,7 @@ textarea {
 
 /*--Global Styles--*/
 
-html, body{
+body, html{
   background-color: #eee;
   font-size: 16px;
   font-family: 'Source Sans Pro',sans-serif;
@@ -175,6 +175,10 @@ input.btn{
   margin: 0 auto;
 }
 
+.logo img{
+  width: 100%;
+}
+
 nav{
   width: 100%;
 }
@@ -202,10 +206,11 @@ main{
   width: 96%;
   padding: 0 2%;
   margin: auto;
+  max-width: 960px;
   clear: both;
 }
 
-/*--Hero Area--*/
+/*--Featured News Area--*/
 
 .top-story{
   width: 100%;
@@ -219,6 +224,7 @@ main{
 
 .top-img img{
   width: 100%;
+  border: 1.5px solid black;
 }
 
 /*--Sidebar--*/
@@ -281,6 +287,7 @@ main{
 
 /*--About Page--*/
 
+
 .contact-info{
   width: 100%;
   padding-top: 30px;
@@ -295,6 +302,71 @@ main{
   display: inline-block;
   vertical-align: top;
 }
+
+.strong{
+  font-weight: 700;
+}
+
+.map-container{
+  position: relative;
+  padding-bottom: 75%;
+  height: hidden;
+  overflow: hidden:
+}
+
+.map-container iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.mission{
+  width: 100%;
+}
+
+.team-member{
+  padding: 15px 0;
+  clear:both;
+}
+
+.team-img{
+  width: 40%;
+  padding-bottom: 40%;
+  float: left;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+}
+
+.team-name{
+  margin-bottom: 0;
+}
+
+.team-title{
+  margin-top: 0;
+}
+
+.team-description{
+  display:none;
+}
+
+#team-img-jack{
+  background: url('../img/team-jack.png') center no-repeat;
+  background-size: cover;
+}
+
+#team-img-lana{
+  background: url('../img/team-lana.png') center no-repeat;
+  background-size: cover;
+}
+
+#team-img-willow{
+  background: url('../img/team-willow.png') center no-repeat;
+  background-size: cover;
+}
+
 
 /*--Faq Page-*/
 
@@ -414,10 +486,15 @@ footer{
 @media screen and (min-width: 768px){
   /* Tablet Styles Here */
 
+  body{
+    background-color: gray;
+  }
+
 .main-header{
   width: 100%;
   margin: auto;
   padding: 0 3%;
+  background-color: #dddddd;
 }
 
 .main-header .head-wrapper{
@@ -429,6 +506,10 @@ footer{
 .logo{
   width: 40%;
   float: left;
+}
+
+.logo img{
+  max-width: 312px;
 }
 
 nav{
@@ -455,24 +536,17 @@ nav ul li{
   width: 100%;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: blue;
-
 }
 
-.top-image{
+.top-img{
   width: 57%;
   float: left;
   padding-right: 3%;
 }
 
-.top-image img{
-  width: 100%;
-}
-
 .top-info{
   width: 40%;
-  float: right;
-
+  float: left;
 }
 
 /*--Sidebar--*/
@@ -481,6 +555,7 @@ nav ul li{
   clear: both;
   width: 37%;
   float: right;
+  background-color: pink;
 }
 
 .sidebar-about-us,
@@ -493,9 +568,11 @@ nav ul li{
 /*--Feed--*/
 
 .feed{
+  margin: 0;
   width: 60%;
   float: left;
   border-right: 1px solid #ccc;
+  background-color: gray;
 }
 
 .feed h2{
@@ -507,11 +584,12 @@ nav ul li{
 }
 
 .feed-item{
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 .feed-info{
   width: 57%;
+  float: right;
 }
 
 /*--About Page--*/
@@ -519,12 +597,43 @@ nav ul li{
 .contact-info{
   width: 40%;
   float: left;
+  padding-bottom: 3%;
 }
 
 .mission{
   width: 100%;
   clear: both;
   border-top: 1px solid gray;
+  padding-bottom: 3%;
+}
+
+.map-container{
+  position: relative;
+  padding-bottom: 40%;
+  height: 0;
+  overflow: hidden;
+  width: 58%;
+  float: left;
+  border: 1px solid #333;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.map-container iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.team{
+  width: 100%;
+  margin-bottom: 15%;
+}
+
+.team-member{
+  width: 50%;
 }
 
 .team{
@@ -550,6 +659,12 @@ article.faqs-item{
 @media screen and (min-width: 940px) {
  /* Desktop Styles Here */
 
+ main{
+   margin: 0;
+   max-width: 100%;
+
+ }
+
 h1{
   font-size: 1.6em;
   line-height: 1.8;
@@ -559,9 +674,16 @@ h2{
   font-size: 1.4em;
 }
 
+.main-header {
+  background-color: #dddddd;
+}
 
 
 /*--Hero Area--*/
+
+.hero-area{
+  width: 100%;
+}
 .top-story{
   width: 65%;
   float: left;
@@ -632,6 +754,40 @@ h2{
 .feed-img{
   width: 20%;
 }
+
+
+
+/*--About Page--*/
+
+.contact-info{
+  margin-left: 25px;
+  width: 35%;
+
+}
+
+.team{
+  width: auto;
+}
+
+.team-member{
+  padding: 15px 0 15px 10px;
+}
+
+.team-img{
+  margin-right: 5%;
+}
+
+.team-name{
+  margin-top: 0;
+}
+
+.team-description{
+  display: block;
+  float: right;
+}
+
+
+
 
 /*--Footer--*/
 
